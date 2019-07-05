@@ -5,11 +5,6 @@ const path = require('path');
 const server = express();
 server.use(express.json());
 
-server.post("/send", (req, res) => {
-    console.log("submited")
-});
-
-server.use("/", routes);
 
 // Serve static assets in production
 if(process.env.NODE_ENV === 'production') {
