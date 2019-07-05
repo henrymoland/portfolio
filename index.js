@@ -7,7 +7,7 @@ server.use(express.json());
 
 
 // Serve static assets in production
-if(process.env.NODE_ENV === 'production') {
+if(process.env.NODE_ENV === 'client') {
     // Set static folder
     server.use(express.static('client/build'));
     server.get('*', (req, res) => {
